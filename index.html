@@ -1,0 +1,746 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Mày Tuổi Lợn Ok? - Admin</title>
+        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png">
+        <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png">
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="./public/css/tailwind.min.css">
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/sweetalert2.all.min.js"></script>
+        <script>
+            function copy(element) 
+            {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+                Swal.fire("Thông báo", "Copy thành công!", "success");
+            }
+        </script>
+    </head>
+    <main class="min-h-screen relative bg-gray-50 pb-10">
+        <div class="h-60 w-full"><img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="cover" class="w-full h-full object-cover object-center" /></div>
+        <div class="container px-4">
+            <div class="flex flex-wrap px-4">
+                <div class="w-full lg:w-1/3">
+                    <aside class="sticky top-0 bg-white md:mx-8 lg:mx-4 mb-8 p-6 shadow-md rounded-md -mt-40">
+                        <div class="w-24 h-24 rounded-md overflow-hidden mx-auto mb-5"><img src="https://i.pinimg.com/564x/bd/9e/0c/bd9e0c78a5af0557f6bfd5698d0747a2.jpg" alt="shafiqhammad" class="w-full" /></div>
+                        <div class="text-center">
+                            <h1 class="text-xl text-gray-800 font-bold mb-1">
+                               Nguyễn Chí Thiện <i data-visualcompletion="css-img" aria-label="Tài khoản đã xác minh" role="img" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yz/r/1V-DQr7y1uH.png&quot;); background-position: -110px -92px; background-size: 190px 146px; width: 16px; height: 16px; background-repeat: no-repeat; display: inline-block;"></i>                            </h1>
+                            <h3> Freelancer & Web Design</h3>
+                            
+
+                            <ul class="flex flex-wrap justify-center">
+                                <li class="m-2">
+                                    <a href="https://www.facebook.com/NguyenChiThienX/" class="w-8 h-8 bg-purple-100 rounded text-purple-800 flex items-center justify-center hover:text-white hover:bg-purple-600">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="m-2">
+                                    <a href="https://github.com/cthienvathien" class="w-8 h-8 bg-purple-100 rounded text-purple-800 flex items-center justify-center hover:text-white hover:bg-purple-600">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="m-2">
+                                    <a href="https://www.instagram.com/_ng.chiithirn_/" class="w-8 h-8 bg-purple-100 rounded text-purple-800 flex items-center justify-center hover:text-white hover:bg-purple-600">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                            ></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <style>@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+
+                                    * {
+                                      transition: all 0.3s ease-out;
+                                    }
+                                    
+                                    html,
+                                    body {
+                                      height: 100%;
+                                      font-family: "Nunito", sans-serif;
+                                      font-size: 16px;
+                                    }
+                                    
+                                    .container {
+                                      width: 100%;
+                                      height: 100%;
+                                      display: flex;
+                                      flex-wrap: wrap;
+                                      align-items: center;
+                                      justify-content: center;
+                                    }
+                                    
+                                    h3 {
+                                      color: #262626;
+                                      font-size: 17px;
+                                      line-height: 24px;
+                                      font-weight: 700;
+                                      margin-bottom: 4px;
+                                    }
+                                    
+                                    p {
+                                      font-size: 17px;
+                                      font-weight: 400;
+                                      line-height: 20px;
+                                      color: #666666;
+                                    
+                                      &.small {
+                                        font-size: 14px;
+                                      }
+                                    }
+                                    
+                                    .go-corner {
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      position: absolute;
+                                      width: 32px;
+                                      height: 32px;
+                                      overflow: hidden;
+                                      top: 0;
+                                      right: 0;
+                                      background-color: #00838d;
+                                      border-radius: 0 4px 0 32px;
+                                    }
+                                    
+                                    .go-arrow {
+                                      margin-top: -4px;
+                                      margin-right: -4px;
+                                      color: white;
+                                      font-family: courier, sans;
+                                    }
+                                    
+                                    .card1 {
+                                      display: block;
+                                      position: relative;
+                                      max-width: 262px;
+                                      background-color: #f2f8f9;
+                                      border-radius: 4px;
+                                      padding: 32px 24px;
+                                      margin: 12px;
+                                      text-decoration: none;
+                                      z-index: 0;
+                                      overflow: hidden;
+                                    
+                                      &:before {
+                                        content: "";
+                                        position: absolute;
+                                        z-index: -1;
+                                        top: -16px;
+                                        right: -16px;
+                                        background: #00838d;
+                                        height: 32px;
+                                        width: 32px;
+                                        border-radius: 32px;
+                                        transform: scale(1);
+                                        transform-origin: 50% 50%;
+                                        transition: transform 0.25s ease-out;
+                                      }
+                                    
+                                      &:hover:before {
+                                        transform: scale(21);
+                                      }
+                                    }
+                                    
+                                    .card1:hover {
+                                      p {
+                                        transition: all 0.3s ease-out;
+                                        color: rgba(255, 255, 255, 0.8);
+                                      }
+                                      h3 {
+                                        transition: all 0.3s ease-out;
+                                        color: #ffffff;
+                                      }
+                                    }
+                                    
+                                    </style>
+                            </ul>
+                        
+                        </div>
+                        <div class="text-start pt-4">
+                            <a color="white"><b><h8> About Me :</h8></b></font>
+                                </a>
+                                <h3> Đẹp zai, học giỏi, nhà hơi nghèo mụt tí</h3>
+                              <h3 class="text-md mb-2 uppercase font-medium text-gray-900">______________________________</h3>
+                              <a color="white"><b><h8>Nơi ở :</h8></b></font>
+                                </a>
+                                <a <b><h7>Biên Hòa - Đồng Nai</h7></b></font>
+                                </a>
+                                <br>
+                            
+                                <a color="white"><b><h8>Ngày sinh :</h8></b></font>
+                                </a>
+                                <a <b><h7>30-01-200*</h7></b></font>
+                                </a>
+                                <br>
+                            
+                            <a color="white"><b><h8>Công việc :</h8></b></font>
+                                </a>
+                                <a <b><h7>Học sinh & Tricker lỏ</h7></b></font>
+                                </a>
+                                <br>
+                           
+                            <a color="white"><b><h8>Ước mơ :</h8></b></font>
+                                </a>
+                                <a <b><h7>Trở thành một coder chuyên nghiệp</h7></b></font>
+                                </a>
+                                <br>
+                           
+                                      <h3 class="text-md mb-2 uppercase font-medium text-gray-800"
+                                      >______________________________
+                                      
+                                      
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <section class="py-8">
+                        <div class="flex flex-wrap md:px-4">
+                            <div class="w-full">
+                                <div class="md:mx-4">
+                                    <h2 class="text-2xl text-gray-800 font-medium mb-                                    <h3 class="text-2xl text-gray-800 font-medium mb-4"></h3>
+                                
+                                
+                                
+                                </h2>
+                                  <div>
+                                    <div class="grid grid-cols-12 gap-3">
+                                        <div class="bg-white card-case overflow-hidden shadow-md col-span-4 md:col-span-6 sm:col-span-6 col-span-12">
+                                            <div class="px-6 py-4">
+                                                <div class="font-bold text-xl mb-2 text-center"><img class="img-center" src="https://cdn-icons-png.flaticon.com/512/2097/2097276.png" style="height: 55px; width: 55px;" /></div>
+                                                <p class="text-gray-700 text-center">
+                                                    <b>
+                                                        Thông Tin Liên Hệ
+                                                    </b>
+                                                    <br />
+                                                    <b id="wallet1">(Contact Information)</b><br> <br><a ><b>Code by: Nguyễn Chí Thiện</b></a></p>
+                                                    <br />
+                                                    <button class="mt-3 bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full" onclick="window.open('https://maytuoilonok.tk/profile/info', '_blank')">Open</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white card-case overflow-hidden shadow-md col-span-4 md:col-span-6 sm:col-span-6 col-span-12">
+                                            <div class="px-6 py-4">
+                                                <div class="font-bold text-xl mb-2 text-center"><img class="img-center" src="https://cdn-icons-png.flaticon.com/512/719/719372.png" style="height: 55px; width: 55px;" /></div>
+                                                <p class="text-gray-700 text-center">
+                                                    <b>
+                                                        Thông Tin Thanh Toán
+                                                    </b>
+                                                    <br />
+                                                    <b id="wallet2">(Billing Information)</b><br> <br><a ><b>Code by: Nguyễn Chí Thiện</b></a></p>
+                                                    <br />
+                                                    <button class="mt-3 bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full" onclick="window.open('https://maytuoilonok.tk/profile/payment', '_blank')">Open</button>
+                                                </p>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                            function copy(giatri) {
+                                var $temp = $("<input>");
+                                $("body").append($temp);
+                                $temp.val(giatri).select();
+                                document.execCommand("copy");
+                                $temp.remove();
+                                alert("Copy Thành Công !");
+                            }
+                        </script>
+                                <div class="py-4 md:mx-4">
+                                    <h3 class="text-2xl text-gray-800 font-medium mb-4">Basic skills</h3>
+                                    <div class="flex flex-wrap px-4 py-4 bg-white shadow-lg">
+                                        <div class="w-full md:w-1/2">
+                                            <div class="mb-4 md:mx-4">
+                                                <div class="flex justify-between items-center mb-1">
+                                                    <h5 class="text-md text-gray-400 font-light">Html</h5>
+                                                    <span class="text-md text-purple-600 font-bold">91%</span>
+                                                </div>
+                                                <div class="w-full bg-purple-200 relative h-2 rounded"><div class="absolute h-full left-0 top-0 bg-purple-600 rounded" style="width: 91%;"></div></div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full md:w-1/2">
+                                            <div class="mb-4 md:mx-4">
+                                                <div class="flex justify-between items-center mb-1">
+                                                    <h5 class="text-md text-gray-400 font-light">Css</h5>
+                                                    <span class="text-md text-purple-600 font-bold">92%</span>
+                                                </div>
+                                                <div class="w-full bg-purple-200 relative h-2 rounded"><div class="absolute h-full left-0 top-0 bg-purple-600 rounded" style="width: 92%;"></div></div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full md:w-1/2">
+                                            <div class="mb-4 md:mx-4">
+                                                <div class="flex justify-between items-center mb-1">
+                                                    <h5 class="text-md text-gray-400 font-light">Javascript</h5>
+                                                    <span class="text-md text-purple-600 font-bold">98%</span>
+                                                </div>
+                                                <div class="w-full bg-purple-200 relative h-2 rounded"><div class="absolute h-full left-0 top-0 bg-purple-600 rounded" style="width: 95%;"></div></div>
+                                            </div>
+                                        </div>
+                                        <div class="w-full md:w-1/2">
+                                            <div class="mb-4 md:mx-4">
+                                                <div class="flex justify-between items-center mb-1">
+                                                    <h5 class="text-md text-gray-400 font-light">C++</h5>
+                                                    <span class="text-md text-purple-600 font-bold">97%</span>
+                                                </div>
+                                                <div class="w-full bg-purple-200 relative h-2 rounded"><div class="absolute h-full left-0 top-0 bg-purple-600 rounded" style="width: 97%;"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            
+                    <footer class="bg-white p-4 absolute bottom-0 left-0 w-full">
+            <div class="container px-4">
+                
+                <p class="text-sm text-gray-400 text-center">© Copyright 2022 -  <script>document.write</script> <a class="text-purple-600" href=https://zalo.me/0832746151/" rel="nofollow">ThienDuck</a></p>
+
+            </div>
+            
+        </footer>
+            <script language="JavaScript">
+                window.onload = function() {
+                    document.addEventListener("contextmenu", function(e) {
+                        e.preventDefault();
+                    }, false);
+                    document.addEventListener("keydown", function(e) {
+                        //document.onkeydown = function(e) {
+                        // "I" key
+                        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                            disabledEvent(e);
+                        }
+                        // "J" key
+                        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                            disabledEvent(e);
+                        }
+                        // "S" key + macOS
+                        if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                            disabledEvent(e);
+                        }
+                        // "U" key
+                        if (e.ctrlKey && e.keyCode == 85) {
+                            disabledEvent(e);
+                        }
+                        // "F12" key
+                        if (event.keyCode == 123) {
+                            disabledEvent(e);
+                        }
+                    }, false);
+    
+                    function disabledEvent(e) {
+                        if (e.stopPropagation) {
+                            e.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                        e.preventDefault();
+                        return false;
+                    }
+                };
+            </script>
+            <script type='text/javascript'>
+                //<![CDATA[
+                shortcut = {
+                    all_shortcuts: {},
+                    add: function(a, b, c) {
+                        var d = {
+                            type: "keydown",
+                            propagate: !1,
+                            disable_in_input: !1,
+                            target: document,
+                            keycode: !1
+                        };
+                        if (c)
+                            for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]);
+                        else c = d;
+                        d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)), a = a.toLowerCase(), e = function(d) {
+                            d = d || window.event;
+                            if (c.disable_in_input) {
+                                var e;
+                                d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (e = e.parentNode);
+                                if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return
+                            }
+                            d.keyCode ? code = d.keyCode : d.which && (code = d.which), e = String.fromCharCode(code).toLowerCase(), 188 == code && (e = ","), 190 == code && (e = ".");
+                            var f = a.split("+"),
+                                g = 0,
+                                h = {
+                                    "`": "~",
+                                    1: "!",
+                                    2: "@",
+                                    3: "#",
+                                    4: "$",
+                                    5: "%",
+                                    6: "^",
+                                    7: "&",
+                                    8: "*",
+                                    9: "(",
+                                    0: ")",
+                                    "-": "_",
+                                    "=": "+",
+                                    ";": ":",
+                                    "'": '"',
+                                    ",": "<",
+                                    ".": ">",
+                                    "/": "?",
+                                    "\\": "|"
+                                },
+                                i = {
+                                    esc: 27,
+                                    escape: 27,
+                                    tab: 9,
+                                    space: 32,
+                                    "return": 13,
+                                    enter: 13,
+                                    backspace: 8,
+                                    scrolllock: 145,
+                                    scroll_lock: 145,
+                                    scroll: 145,
+                                    capslock: 20,
+                                    caps_lock: 20,
+                                    caps: 20,
+                                    numlock: 144,
+                                    num_lock: 144,
+                                    num: 144,
+                                    pause: 19,
+                                    "break": 19,
+                                    insert: 45,
+                                    home: 36,
+                                    "delete": 46,
+                                    end: 35,
+                                    pageup: 33,
+                                    page_up: 33,
+                                    pu: 33,
+                                    pagedown: 34,
+                                    page_down: 34,
+                                    pd: 34,
+                                    left: 37,
+                                    up: 38,
+                                    right: 39,
+                                    down: 40,
+                                    f1: 112,
+                                    f2: 113,
+                                    f3: 114,
+                                    f4: 115,
+                                    f5: 116,
+                                    f6: 117,
+                                    f7: 118,
+                                    f8: 119,
+                                    f9: 120,
+                                    f10: 121,
+                                    f11: 122,
+                                    f12: 123
+                                },
+                                j = !1,
+                                l = !1,
+                                m = !1,
+                                n = !1,
+                                o = !1,
+                                p = !1,
+                                q = !1,
+                                r = !1;
+                            d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !0);
+                            for (var s = 0; k = f[s], s < f.length; s++) "ctrl" == k || "control" == k ? (g++, m = !0) : "shift" == k ? (g++, j = !0) : "alt" == k ? (g++, o = !0) : "meta" == k ? (g++, q = !0) : 1 < k.length ? i[k] == code && g++ : c.keycode ? c.keycode == code && g++ : e == k ? g++ : h[e] && d.shiftKey && (e = h[e], e == k && g++);
+                            if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate)) return d.cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d.stopPropagation(), d.preventDefault()), !1
+                        }, this.all_shortcuts[a] = {
+                            callback: e,
+                            target: d,
+                            event: c.type
+                        }, d.addEventListener ? d.addEventListener(c.type, e, !1) : d.attachEvent ? d.attachEvent("on" + c.type, e) : d["on" + c.type] = e
+                    },
+                    remove: function(a) {
+                        var a = a.toLowerCase(),
+                            b = this.all_shortcuts[a];
+                        delete this.all_shortcuts[a];
+                        if (b) {
+                            var a = b.event,
+                                c = b.target,
+                                b = b.callback;
+                            c.detachEvent ? c.detachEvent("on" + a, b) : c.removeEventListener ? c.removeEventListener(a, b, !1) : c["on" + a] = !1
+                        }
+                    }
+                }, shortcut.add("Ctrl+U", function() {
+                    top.location.href = "https://zalo.me/0832746151"
+                }), shortcut.add("F12", function() {
+                    top.location.href = "https://zalo.me/0832746151"
+                }), shortcut.add("Ctrl+Shift+I", function() {
+                    top.location.href = "https://zalo.me/0832746151"
+                }), shortcut.add("Ctrl+S", function() {
+                    top.location.href = "https://zalo.me/0832746151"
+                }), shortcut.add("Ctrl+Shift+C", function() {
+                    top.location.href = "https://zalo.me/0832746151"
+                });
+            </script>
+                    <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake"></div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❅</div>
+        </div>
+        <style>
+            @-webkit-keyframes snowflakes-fall {
+                0% {
+                    top: -10%
+                }
+                100% {
+                    top: 100%
+                }
+            }
+        
+            @-webkit-keyframes snowflakes-shake {
+                0%,
+                100% {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0)
+                }
+                50% {
+                    -webkit-transform: translateX(100px);
+                    transform: translateX(100px)
+                }
+            }
+        
+            @keyframes snowflakes-fall {
+                0% {
+                    top: -10%
+                }
+                100% {
+                    top: 100%
+                }
+            }
+        
+            @keyframes snowflakes-shake {
+                0%,
+                100% {
+                    transform: translateX(0)
+                }
+                50% {
+                    transform: translateX(100px)
+                }
+            }
+        
+            .snowflake {
+                color: #fff;
+                font-size: 1em;
+                font-family: 'Times New Roman';
+                text-shadow: 0 0 10px #000;
+                position: fixed;
+                top: -10%;
+                z-index: 9999;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                cursor: default;
+                -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+                -webkit-animation-duration: 10s, 3s;
+                -webkit-animation-timing-function: linear, ease-in-out;
+                -webkit-animation-iteration-count: infinite, infinite;
+                -webkit-animation-play-state: running, running;
+                animation-name: snowflakes-fall, snowflakes-shake;
+                animation-duration: 10s, 3s;
+                animation-timing-function: linear, ease-in-out;
+                animation-iteration-count: infinite, infinite;
+                animation-play-state: running, running;
+            }
+        
+            .snowflake:nth-of-type(0) {
+                left: 1%;
+                -webkit-animation-delay: 0s, 0s;
+                animation-delay: 0s, 0s
+            }
+        
+            .snowflake:nth-of-type(1) {
+                left: 10%;
+                -webkit-animation-delay: 1s, 1s;
+                animation-delay: 1s, 1s
+            }
+        
+            .snowflake:nth-of-type(2) {
+                left: 20%;
+                -webkit-animation-delay: 6s, .5s;
+                animation-delay: 6s, .5s
+            }
+        
+            .snowflake:nth-of-type(3) {
+                left: 30%;
+                -webkit-animation-delay: 4s, 2s;
+                animation-delay: 4s, 2s
+            }
+        
+            .snowflake:nth-of-type(4) {
+                left: 40%;
+                -webkit-animation-delay: 2s, 2s;
+                animation-delay: 2s, 2s
+            }
+        
+            .snowflake:nth-of-type(5) {
+                left: 50%;
+                -webkit-animation-delay: 8s, 3s;
+                animation-delay: 8s, 3s
+            }
+        
+            .snowflake:nth-of-type(6) {
+                left: 60%;
+                -webkit-animation-delay: 6s, 2s;
+                animation-delay: 6s, 2s
+            }
+        
+            .snowflake:nth-of-type(7) {
+                left: 70%;
+                -webkit-animation-delay: 2.5s, 1s;
+                animation-delay: 2.5s, 1s
+            }
+        
+            .snowflake:nth-of-type(8) {
+                left: 80%;
+                -webkit-animation-delay: 1s, 0s;
+                animation-delay: 1s, 0s
+            }
+        
+            .snowflake:nth-of-type(9) {
+                left: 90%;
+                -webkit-animation-delay: 3s, 1.5s;
+                animation-delay: 3s, 1.5s
+            }
+        
+            .snowflake:nth-of-type(10) {
+                left: 25%;
+                -webkit-animation-delay: 2s, 0s;
+                animation-delay: 2s, 0s
+            }
+        
+            .snowflake:nth-of-type(11) {
+                left: 65%;
+                -webkit-animation-delay: 4s, 2.5s;
+                animation-delay: 4s, 2.5s
+            }
+        </style>
+        <!-- import icon font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+<!-- Import thư viện JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+// kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+var offset = 500;
+// thời gian di trượt 0.75s ( 1000 = 1s )
+var duration = 750;
+$(function(){
+$(window).scroll(function () {
+if ($(this).scrollTop() > offset)
+$('#top-up').fadeIn(duration);else
+$('#top-up').fadeOut(duration);
+});
+$('#top-up').click(function () {
+$('body,html').animate({scrollTop: 0}, duration);
+});
+});
+</script>
+<div title="Về đầu trang" id="top-up">
+<i class="fas fa-arrow-circle-up"></i></div>
+<style>
+  #top-up {
+font-size: 3rem;
+cursor: pointer;
+position: fixed;
+z-index: 9999;
+color:#9933FF;
+bottom: 15px;
+right: 15px;
+display: none;
+}
+#top-up:hover {
+color: #333
+}
+</style>
+
+<style>
+body {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+<script type='text/javascript'>
+    //<![CDATA[
+        !function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+    /]]>
+</script>
+</style>
+<script type="text/javascript">
+//<=!=[=C=D=A=T=A=[
+document.onkeypress = function(event) {
+event = (event || window.event);
+if (event.keyCode === 123) {
+//alert('No F-12');
+return false;
+}
+};
+document.onmousedown = function(event) {
+event = (event || window.event);
+if (event.keyCode === 123) {
+//alert('No F-keys');
+return false;
+}
+};
+document.onkeydown = function(event) {
+event = (event || window.event);
+if (event.keyCode === 123) {
+//alert('No F-keys');
+return false;
+}
+};
+function contentprotector() {
+return false;
+}
+function mousehandler(e) {
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if ((eventbutton === 2) || (eventbutton === 3))
+return false;
+}
+document.oncontextmenu = contentprotector;
+document.onmouseup = contentprotector;
+var isCtrl = false;
+window.onkeyup = function(e)
+{
+if (e.which === 17)
+isCtrl = false;
+}
+window.onkeydown = function(e)
+{
+if (e.which === 17)
+isCtrl = true;
+if (((e.which === 85) || (e.which === 65) || (e.which === 88) || (e.which === 67) || (e.which === 86) || (e.which === 83)) && isCtrl === true)
+{
+return false;
+}
+}
+isCtrl = false;
+document.ondragstart = contentprotector;
+//]=]=> </script>
